@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Recipe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      max-width: 800px;
+      width: 100%;
+      gap: 20px;
+    }
+
+    .form {
+      flex: 1;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    textarea {
+      height: 70px;
+      resize: none;
+    }
+
+    .btn {
+      margin-top: 15px;
+      width: 100%;
+      padding: 10px;
+      background: orange;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: darkorange;
+    }
+
+    .image {
+      flex: 1;
+      display: flex;      
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image img {
+  width: 100%;  /* Increase from 100% of container to 90% of available space */
+  max-width: 500px; /* Set a maximum width */
+  height: 650px; /* Keep aspect ratio */
+  border-radius: 10px;
+}
+    .image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Form Section -->
+    <div class="form">
+      <h2>➕ Upload your recipe</h2>
+      
+      <label>Photo</label>
+      <input type="file" id="imageInput" accept="image/*">
+
+      <label>Title</label>
+      <input type="text" placeholder="Enter recipe title">
+
+      <label>Short description / tags</label>
+      <input type="text" placeholder="e.g. spicy, 20 minutes, vegan">
+
+      <label>Ingredients</label>
+      <textarea placeholder="List ingredients here"></textarea>
+
+      <label>Steps</label>
+      <textarea placeholder="Write steps here"></textarea>
+
+      <button class="btn" aria-label="Publish" onclick="window.location.href='index.html'">⬆ Publish</button>
+    </div>
+
+    <!-- Image Section -->
+    <div class="image">
+      <img id="previewImage" src='' alt="Recipe Image">
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('imageInput').addEventListener('change', function (event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          document.getElementById('previewImage').src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
+
+</body>
+</html>

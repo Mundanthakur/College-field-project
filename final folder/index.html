@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartChef - Your complete guide to master cooking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/jpeg;base64,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" type="image/x-icon">
+</head>
+<body>     
+<div id="main-header" class="header">
+  <div class="logo">SmartChef<span>.</span></div>
+  <div id="nav-section" class="nav-bar">
+    <div class="nav-left">
+      <a href="#">RECIPES</a>
+      <a href="#">POPULAR</a>
+      <a href="#">MEAT & SEAFOOD</a>
+      <a href="#">HEALTHY & DIET</a>
+      <a href="#">HOLIDAYS</a>
+      <a href="#">CUISINE</a> 
+      <a href="#">SEASONAL</a>
+    </div>
+    <div class="nav-right">
+     <button class="icon-btn" aria-label="Search">🔎</button>
+      <button class="icon-btn" aria-label="Upload" onclick="window.location.href='upload.html'">➕</button>
+      <button class="icon-btn" aria-label="Profile" onclick="window.location.href='userlogin.html'">👤</button>
+
+
+    </div>
+  </div>
+</div>
+
+
+<div class="recipe-section">
+        <div class="overlay">
+            <h1>88 ALL-TIME BEST DINNER RECIPES</h1>
+            <a href="#" class="btn-see-all">SEE THEM ALL</a>
+        </div>
+    </div>
+
+
+
+<h2>Fresh From Our Community</h2>
+
+  <div class="community-section">
+    <!-- Review Card 1 -->
+    <div class="review-card">
+      <div class="user-info">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwYejEq7iAr_jXFOi4S2dbkfwD10-4-T9Wwg&s" alt="User">
+        <p><strong>MS.Dhoni</strong> reviewed <a href="#">Chocolate Chip Cake</a></p>
+      </div>
+      <div class="stars">★★★★★</div>
+      <p class="review-text">
+        I’ve been making this recipe for years. It is requested for birthdays and gatherings for family and friends. It is my go-to cake recipe! The cake comes out moist and taste delicious.
+      </p>
+      <div class="time-reply">
+        <span>4 HOURS AGO</span>
+        <span>REPLY</span>
+      </div>
+    </div>
+
+    <!-- Review Card 2 -->
+    <div class="review-card">
+      <div class="user-info">
+        <img src="https://media.gettyimages.com/id/1716746662/photo/thiruvananthapuram-india-virat-kohli-of-india-poses-for-a-portrait-ahead-of-the-icc-mens.jpg?s=612x612&w=gi&k=20&c=m4rWSeT936e6rQ-NK6wTmdKxJG3coek76IWta1FiXS4=" alt="User">
+        <p><strong>Virat Kohli</strong> asked a question about <a href="#">Country Fried Steak and Milk…</a></p>
+      </div>
+      <p class="review-text">
+        Country fried steak Tyson. Can I use milk instead of water that comes frozen with the steak?
+      </p>
+      <div class="time-reply">
+        <span>14 HOURS AGO</span>
+        <span>REPLY</span>
+      </div>
+    </div>
+  </div>
+
+
+<h2>What We're Craving</h2>
+<div class="craving-section">
+    <div class="craving-card">
+      <img src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_750,ar_1:1/v1/img/recipes/75/75/8/NxhOU2TMa2ZhvnHCoobQ_0S9A8180.jpg" alt="Chicken Dinners">
+      <div class="craving-overlay">
+        <small>Collection</small>
+        <h3>40 Quick & Easy Chicken Dinners</h3>
+      </div>
+    </div>
+
+    <div class="craving-card">
+      <img src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_750,ar_1:1/v1/img/recipes/58/49/7/fCDQvyJnT5eisnDqqMif_CCSFT%25207%2520-%2520final_4.jpg" alt="French Toast Recipes">
+      <div class="craving-overlay">
+        <small>Collection</small>
+        <h3>43 Favorite French Toast Recipes</h3>
+      </div>
+    </div>
+
+    <div class="craving-card">
+      <img src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_750,ar_1:1/v1/img/recipes/26/41/85/lRpMpYBUQguVMK9UhzRl_pineapple-chicken-salad-peanut-dressing-asian-7665.jpg" alt="Salad Recipes">
+      <div class="craving-overlay">
+        <small>Collection</small>
+        <h3>13 Powerhouse Salad Recipes</h3>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="wrap">
+    <h2 class="title">Explore More</h2>
+
+    <div class="explore-grid">
+      <div class="explore-item">
+        <span class="explore-thumb">
+          <img src="https://imgstore.sndimg.com/f_auto,c_thumb,q_55,w_250,ar_1:1/foodcom/images/be27babc-a2cb-4807-a7cf-f492f190f130.jpg" alt="Comfort Food Classics">
+        </span>
+        <div class="label">Comfort Food Classics</div>
+      </div>
+
+      <div class="explore-item">
+        <span class="explore-thumb">
+          <img src="https://imgstore.sndimg.com/f_auto,c_thumb,q_55,w_250,ar_1:1/foodcom/images/0ba5e633-8a82-4412-9912-3e4b021d3f36.jpg" alt="International Eats">
+        </span>
+        <div class="label">International Eats</div>
+      </div>
+
+      <div class="explore-item">
+        <span class="explore-thumb">
+          <img src="https://imgstore.sndimg.com/f_auto,c_thumb,q_55,w_250,ar_1:1/foodcom/images/9985d8e3-87d3-4cfc-b312-b355a6630e76.jpg" alt="Breakfast & Brunch">
+        </span>
+        <div class="label">Breakfast & Brunch</div>
+      </div>
+
+      <div class="explore-item">
+        <span class="explore-thumb">
+          <img src="https://imgstore.sndimg.com/f_auto,c_thumb,q_55,w_250,ar_1:1/foodcom/images/b968c752-8018-429d-aa68-b0baf71a9129.jpg" alt="Community Picks">
+        </span>
+        <div class="label">Community Picks</div>
+      </div>
+
+      <div class="explore-item">
+        <span class="explore-thumb">
+          <img src="https://imgstore.sndimg.com/f_auto,c_thumb,q_55,w_250,ar_1:1/foodcom/images/0e6210a9-7b32-4bae-a8a2-b1f8178cd33a.jpg" alt="Quick & Easy">
+        </span>
+        <div class="label">Quick & Easy</div>
+      </div>
+
+      <div class="explore-item">
+        <span class="explore-thumb">
+          <img src="https://imgstore.sndimg.com/f_auto,c_thumb,q_55,w_250,ar_1:1/foodcom/images/4c90f65d-398c-462c-a165-eeca9e73aa8a.jpg" alt="Copycat Recipes">
+        </span>
+        <div class="label">Copycat Recipes</div>
+      </div>
+    </div>
+  </section>
+
+
+<section class="trending">
+  <div class="trending-header">
+    <h2>Trending Now</h2>
+    <a href="#" class="view-all">View All</a>
+  </div>
+
+  <div class="trending-grid">
+    <div class="trend-card">
+      <img src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_4:3/v1/img/recipes/22/13/7/v8NXUJbzQwCB6nL15eWt_PR%25204%2520final%2520-%2520pot%2520roast.jpg" alt="Tender Pot Roast">
+      <h3>Tender Pot Roast</h3>
+    </div>
+    <div class="trend-card">
+      <img src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_4:3/v1/img/recipes/89/95/omZbv836RCmfVJbCHwx8-Chocolate-Mousse---8995--1.JPG" alt="Chocolate Mousse">
+      <h3>Chocolate Mousse</h3>
+    </div>
+    <div class="trend-card">
+      <img src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_4:3/v1/img/recipes/90/94/1/yRmK2xOeTuW1myTWAFNz-Bacony-Deviled-Eggs---90941-2.JPG" alt="Bacony Deviled Eggs">
+      <h3>Bacony Deviled Eggs</h3>
+    </div>
+    <div class="trend-card">
+      <img src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_4:3/v1/img/recipes/19/84/1/TvOnvpOTwKdXtHZ92oko_carrot-cake-natural-cream-cheese-frosting-9015.jpg" alt="Carrot Cake">
+      <h3>Carrot Cake</h3>
+    </div>
+  </div>
+</section>
+
+
+<section class="dont-miss">
+  <h2>Don't Miss</h2>
+
+  <div class="miss-grid">
+    <div class="miss-card">
+      <img src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_750,ar_4:3/v1/img/recipes/17/82/49/C0UjeSAKQi69gCwS0DBQ_0S9A2819.jpg" alt="Mediterranean Diet Recipes">
+      <div class="overlay">
+        <span>Collection</span>
+        <h3>50 Mediterranean Diet Recipes You'll...</h3>
+      </div>
+    </div>
+    <div class="miss-card">
+      <img src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_750,ar_4:3/v1/img/recipes/29/66/52/EkOcxngGTbqHZQ2OyY89_0S9A2524.jpg" alt="Nachos, 20 Ways">
+      <div class="overlay">
+        <span>Collection</span>
+        <h3>Nachos, 20 Ways</h3>
+      </div>
+    </div>
+    <div class="miss-card">
+      <img src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_750,ar_4:3/v1/img/recipes/30/92/31/arM2OvNhQ5aKWEBOgAex_easy-bolognese-recipe-6693.jpg" alt="21 Essential Italian Pastas">
+      <div class="overlay">
+        <span>Collection</span>
+        <h3>21 Essential Italian Pastas</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="recipe-card">
+    <img src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_1280,ar_16:9/v1/img/recipes/43/36/97/h40cdjMARGCcgOUjZpOy_mac%2520and%2520cheese-1176.jpg" alt="Mac and Cheese">
+    <div class="recipe-info">
+      <span>Collection</span>
+      <h2>32 Best Mac & Cheese Recipes</h2>
+      <p>Cheesy and oh so satisfying, mac and cheese can do no wrong. 
+         Transport yourself back to childhood with one of these classic 
+         or kicked-up options.</p>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <h2>Fan Favorites</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_4:3/v1/img/recipes/30/32/45/19L2ucjQneoEANPzyfiQ_0S9A6363.jpg" alt="Oven-Baked Ribs">
+        <div class="card-title">Oven-Baked Ribs</div>
+      </div>
+      <div class="card">
+        <img src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_4:3/v1/img/recipes/30/97/7/7GmgWw4TTUCCw7xGKQAP_0S9A6434.jpg" alt="Mozzarella Sticks">
+        <div class="card-title">Mozzarella Sticks</div>
+      </div>
+      <div class="card">
+        <img src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_4:3/v1/img/recipes/13/22/63/D30C2lxTy6SAflQlb61Q_VP%25204%2520-%2520final_2.jpg" alt="5 Minute Vegan Pancakes">
+        <div class="card-title">5 Minute Vegan Pancakes</div>
+      </div>
+      <div class="card">
+        <img src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_4:3/v1/img/recipes/28/18/77/ZyG0h2VYRjei7iPFSWNI_food.com-14.jpg" alt="Shakshuka">
+        <div class="card-title">Shakshuka</div>
+      </div>
+      <div class="card">
+        <img src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_4:3/v1/img/recipes/35/16/31/TW8kFVRNTwKckUevzMv7_sea-bass-recipe-5393.jpg" alt="Simple Oven-Baked Sea Bass">
+        <div class="card-title">Simple Oven-Baked Sea Bass</div>
+      </div>
+      <div class="card">
+        <img src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_4:3/v1/img/recipes/63/78/6/NrPa79ZESEOqMlMoFDos_fajitas-3.jpg" alt="Fajitas">
+        <div class="card-title">Fajitas</div>
+      </div>
+      <div class="card">
+        <img src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_4:3/v1/img/recipes/39/01/3/aeAtoOWHSeWQh9UD7W3K_0S9A6192.jpg" alt="Whipped Cream Frosting">
+        <div class="card-title">Whipped Cream Frosting</div>
+      </div>
+      <div class="card">
+        <img src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_4:3/v1/img/recipes/63/07/1/Oey61BTvKAEV0tVQz4gU_untitled-1868.jpg" alt="The best Belgian Waffles">
+        <div class="card-title">The best Belgian Waffles</div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i> BACK TO TOP
+      </a>
+    </div>
+
+    <div class="footer-links">
+      <a href="#">All Categories</a>
+      <a href="#">Site Map</a>
+      <a href="#">About Us</a>
+      <a href="#">Help</a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 SmartChef, Made with love by Mundan Thakur. All rights reserved.</p>
+      <div class="legal-links">
+        <a href="#">Advertise</a>
+        <a href="#">AdChoices</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Visitor Agreement</a>
+        <a href="#">India Pivacy Policy</a>
+        <a href="#">Do Not Sell or Share My Personal Information</a>
+      </div>
+      <p class="networks">Made By Mundan Thakur <i class="fas fa-chevron-up"></i></p>
+    </div>
+  </footer>
+
+  
+</body>
+</html>
